@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+/* For tablets */
+@media (max-width: 768px) {
+    img {
+      width: auto;
+      height: auto;
+    }
+    .text-2xl {
+        font-size: 1.25rem !important; /* 20px */
+    }
+  }
+  
+  /* For mobile devices */
+  @media (max-width: 480px) {
+    img {
+      width: auto;
+      height: auto;
+    }
+    .text-2xl {
+        font-size: 1rem !important; /* 16px */
+    }
+
+  }

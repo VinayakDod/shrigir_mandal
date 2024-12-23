@@ -1,0 +1,40 @@
+<nav class="bg-orange-500">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <div><img src="assets/srishel_mallayya.png" style="height: 51px;"/></div>
+      <!-- Logo Section -->
+      <div class="flex items-center">
+        <div class="text-2xl font-bold text-white" style="text-shadow: 2px 2px 4px #141414;">ಶ್ರೀ ಗಿರಿ ಮಲ್ಲಯ್ಯ ಭಕ್ತ ಮಂಡಳಿ</div>
+      </div>
+      <div><img src="assets/s_2.png" style="height: 58px;"/></div>
+      <!-- Hamburger Icon for Mobile -->
+      <div class="-mr-2 flex sm:hidden">
+        <button id="menu-toggle" class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-orange-500 hover:bg-white focus:outline-none">
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden sm:ml-6 sm:block">
+        <div class="flex space-x-4">
+          <a routerLink="/" routerLinkActive="active" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-red-50 hover:text-red-400">Home</a>
+          <a routerLink="/about" routerLinkActive="active" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-red-50 hover:text-red-400">About Us</a>
+          <!-- <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-red-50 hover:text-red-400">Gallery</a>
+          <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-red-50 hover:text-red-400">Contacts</a> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="sm:hidden hidden">
+      <div class="space-y-1 px-2 pt-2 pb-3">
+        <a routerLink="/" routerLinkActive="active" class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-red-50 hover:text-red-400">Home</a>
+        <a routerLink="/" routerLinkActive="active" class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-red-50 hover:text-red-400">About Us</a>
+        <!-- <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-red-50 hover:text-red-400">Gallery</a>
+        <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-red-50 hover:text-red-400">Contacts</a> -->
+      </div>
+    </div>
+  </div>
+</nav>
