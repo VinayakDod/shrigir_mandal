@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  //Array for images
   imageList: string[] = [
     'assets/gallery/image1.png',
     'assets/gallery/image2.png',
