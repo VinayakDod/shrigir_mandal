@@ -1,0 +1,25 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .container {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .curve-img{
+    width: 100px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Curve the corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+    transition: transform 0.3s;
+  }

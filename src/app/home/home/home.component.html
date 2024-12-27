@@ -1,7 +1,39 @@
 <div class="background-container">
-    <div class="content">
-      <!-- <h1>Welcome to My Angular App!</h1>
-      <p>This is some content with a blurred background image.</p> -->
+  <div class="content-text">
+    <h1 style="color: black;">Welcome to Shri Giri Mallayya Bhakt Mandli</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi quis eveniet et qui, nisi, omnis corrupti est
+      rerum optio ea earum consequatur delectus itaque, non ipsa nemo fuga cumque esse?</p>
+      <h6>Mission</h6>
+      <p>To Serve Good food and Water to pligrims of Shrishail and communit all Hindus</p>
+
+    <h2>Dasoha Starts from March 29th till April 02</h2>
+    <button>Make a Donation</button>
+    <button>Learn More About Us</button>
+  </div>
+  <div class="gallery-container">
+    <div class="main-image-container">
+      <img [src]="mainImage" alt="Main Image" class="main-image" />
+    </div>
+    <div class="thumbnail-container">
+      <img *ngFor="let image of imageList" [src]="image" alt="Thumbnail" class="thumbnail"
+        (mouseenter)="updateMainImage(image)" />
+    </div>
+
+  </div>
+
+  <div class="year_gallery_container">
+    <div class="card">
+      <div class="image">
+        <img src="assets/shiva_1.jpg" alt="images" />
+      </div>
+      <div class="content">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, delectus?</p>
+      </div>
+      <div class="year">
+        <h3>2023</h3>
+      </div>
     </div>
   </div>
-  
+
+
+</div>
