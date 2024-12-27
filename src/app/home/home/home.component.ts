@@ -24,5 +24,10 @@ export class HomeComponent {
   updateMainImage(image: string): void {
     this.mainImage = image;
   }
-
+  DonationClick(){
+    console.warn("Donation button Clicked");
+  }
+  AbtUsClick(){
+    console.warn("AbtUsClick button Clicked");
+  }
 }
