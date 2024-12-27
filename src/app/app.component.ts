@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { DashBoardComponent } from './dashboard/dash-board/dash-board.component';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { Howl } from 'howler';
-import { BreadCrumbComponent } from './breadcrumb/bread-crumb/bread-crumb.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, DashBoardComponent,BreadCrumbComponent],
+  imports: [RouterOutlet,RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

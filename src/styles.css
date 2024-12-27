@@ -1,5 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 /* For tablets */
+/* Base styles for the navigation links */
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: color 0.3s, background-color 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Hover effect to change text color */
+.nav-link:hover {
+  color: black; /* Change text color */
+  background-color: white; /* Optional: Change background color */
+}
+
 @media (max-width: 768px) {
     img {
       width: auto;
