@@ -1,15 +1,31 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ElementRef, Renderer2,  PLATFORM_ID, Inject  } from '@angular/core';
+import{SlickCarouselModule } from 'ngx-slick-carousel';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,SlickCarouselModule,],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
+  
+
 })
 export class HomeComponent {
   //Array for images
+
+  // constructor(private el: ElementRef, private renderer: Renderer2,@Inject(PLATFORM_ID) private platformId: any){}
+  // slides = [
+  //   { image: 'assets/gallery/image1.png', alt: 'banner1' },
+  //   { image: 'assets/gallery/image2.png', alt: 'banner2' },
+  //   { image: 'assets/gallery/image3.png', alt: 'banner3' },
+  //   { image: 'assets/gallery/image4.png', alt: 'banner4' },
+  //   { image: 'assets/gallery/image1.png', alt: 'banner5' },
+  //   { image: 'assets/gallery/image1.png', alt: 'banner6' }
+  // ];
+  
+
+
   imageList: string[] = [
     'assets/gallery/image1.png',
     'assets/gallery/image2.png',
@@ -25,6 +41,7 @@ export class HomeComponent {
     this.mainImage = image;
   }
   DonationClick(){
+   
     console.warn("Donation button Clicked");
   }
   AbtUsClick(){

@@ -1,22 +1,92 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-warning">
-    <div class="container-fluid">
-        <div class="text-2xl font-bold text-white" style="text-shadow: 2px 2px 4px #141414;">ಶ್ರೀ ಗಿರಿ ಮಲ್ಲಯ್ಯ ಭಕ್ತ ಮಂಡಳಿ</div>
-        <div style="display: flex;">
-            <a routerLink="/" routerLinkActive="active" class="nav-link">Home</a>
-            <a routerLink="/about" routerLinkActive="active" class="nav-link">About Us</a>
-            <a routerLink="/donation" routerLinkActive="active" class="nav-link">Donation</a>
-            <a routerLink="/" routerLinkActive="active" class="nav-link">Gallery</a>
-        </div>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #fad000 !important;">
+  <div class="container-fluid">
+    <!-- Brand/Logo -->
+    <a class="navbar-brand" href="#">
+      <img src="assets/logo.jpg" alt="Logo" style="height: 40px;" class="me-2">
+      <span>ಶ್ರೀ ಗಿರಿ ಮಲ್ಲಯ್ಯ ಭಕ್ತ ಮಂಡಳಿ</span>
+    </a>
+
+    <!-- Toggle Button for Mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a routerLink="/" routerLinkActive="active" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/about" routerLinkActive="active" class="nav-link">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/services" routerLinkActive="active" class="nav-link">Services</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/contact" routerLinkActive="active" class="nav-link">Contact</a>
+        </li>
+      </ul>
     </div>
-  </nav>
-  <div class="container-fluid mt-2">
-    <div class="row">
-      <div class="col-md-12">
-        <router-outlet></router-outlet>
+  </div>
+</nav>
+
+
+
+
+<div class="w-100">
+  <div class="sd-template-one">
+    <div class="sd-t1-slider">
+      <div class="slider">
+        <div>
+          <img src="assets/gallery/image1.png" alt="banner1" width="100%">
+        </div>
+        <div>
+          <img src="assets/gallery/image2.png" alt="banner2" width="100%">
+        </div>
+        <div>
+          <img src="assets/gallery/image3.png" alt="banner3" width="100%">
+        </div>
+      </div>
+    </div>
+    <div class="sd-t1-bottom">
+      <p class="sd-orange">Temple News</p>
+      <marquee id="marquee" direction="left" class="sd-marquee-text">
+        <a class="ml-3 mr-3 under">Paroksha Seva </a> with godly blessings. Scroll down to know all about Srisailam. 
+        Book Paroksha Seva at <a class="ml-3 mr-3 under">https://aptemples.ap.gov.in</a>.
+      </marquee>
+      <div>
+        <button>View All</button>
       </div>
     </div>
   </div>
+</div>
 
 
 
 
+
+<!-- <div class="slider-wrapper">
+  <ngx-slick-carousel
+    class="carousel"
+    [config]="slickConfig"
+  >
+    <div ngxSlickItem *ngFor ="let item of slideItems" class="slide">
+      <img [src]="item.image" alt="Slide Image" />
+      <h3>{{ item.title }}</h3>
+    </div>
+  </ngx-slick-carousel>
+</div> -->
+
+
+
+
+
+<div class="container-fluid mt-2">
+  <div class="row">
+    <div class="col-md-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

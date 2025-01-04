@@ -125,5 +125,42 @@
 
 
   
-
+  .sd-t1-slider {
+    position: relative;
+  }
   
+  .carousel-inner .carousel-item {
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: black; /* Custom color for control icons */
+  }
+  
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 10px;
+    padding-left: 0;
+  }
+  
+  .slick-dots li {
+    margin: 0 5px;
+  }
+  
+  .slick-dots button {
+    background-color: transparent;
+    border: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: gray;
+  }
+  
+  .slick-dots .slick-active button {
+    background-color: black;
+  }
+  
+ 
