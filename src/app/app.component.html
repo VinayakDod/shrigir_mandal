@@ -1,9 +1,11 @@
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #fad000 !important;">
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #f58220 !important; height: 90px;">
+
   <div class="container-fluid">
     <!-- Brand/Logo -->
     <a class="navbar-brand" href="#">
-      <img src="assets/logo.jpg" alt="Logo" style="height: 40px;" class="me-2">
-      <span>ಶ್ರೀ ಗಿರಿ ಮಲ್ಲಯ್ಯ ಭಕ್ತ ಮಂಡಳಿ</span>
+      <img src="assets/logo.png" alt="Logo" style="height: 75px;" class="me-2">
+      <span >ಶ್ರೀ ಗಿರಿ ಮಲ್ಲಯ್ಯ ಭಕ್ತ ಮಂಡಳಿ</span>
     </a>
 
     <!-- Toggle Button for Mobile -->
@@ -32,56 +34,21 @@
   </div>
 </nav>
 
-
-
-
-<div class="w-100">
-  <div class="sd-template-one">
-    <div class="sd-t1-slider">
-      <div class="slider">
-        <div>
-          <img src="assets/gallery/image1.png" alt="banner1" width="100%">
-        </div>
-        <div>
-          <img src="assets/gallery/image2.png" alt="banner2" width="100%">
-        </div>
-        <div>
-          <img src="assets/gallery/image3.png" alt="banner3" width="100%">
+<div class="container">
+  <div class="png-overlay"></div>
+  <div class="scroll-container">
+    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" (init)="slickInit($event)"
+      (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
+      <div *ngFor="let slide of slides; trackBy: trackByFn" ngxSlickItem class="slide">
+        <div class="image-wrapper">
+          <img [src]="slide.img" alt="" style="width: 200vh !important; height: 35vh !important;">
         </div>
       </div>
-    </div>
-    <div class="sd-t1-bottom">
-      <p class="sd-orange">Temple News</p>
-      <marquee id="marquee" direction="left" class="sd-marquee-text">
-        <a class="ml-3 mr-3 under">Paroksha Seva </a> with godly blessings. Scroll down to know all about Srisailam. 
-        Book Paroksha Seva at <a class="ml-3 mr-3 under">https://aptemples.ap.gov.in</a>.
-      </marquee>
-      <div>
-        <button>View All</button>
-      </div>
-    </div>
+    </ngx-slick-carousel>
   </div>
 </div>
 
-
-
-
-
-<!-- <div class="slider-wrapper">
-  <ngx-slick-carousel
-    class="carousel"
-    [config]="slickConfig"
-  >
-    <div ngxSlickItem *ngFor ="let item of slideItems" class="slide">
-      <img [src]="item.image" alt="Slide Image" />
-      <h3>{{ item.title }}</h3>
-    </div>
-  </ngx-slick-carousel>
-</div> -->
-
-
-
-
+<!--  -->
 
 <div class="container-fluid mt-2">
   <div class="row">

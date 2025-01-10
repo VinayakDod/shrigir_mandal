@@ -113,7 +113,9 @@ button:hover {
   font-size: 1rem;
   padding: 0.5rem 1rem;
 }
-
+.navbar-brand span {
+  font-weight: bold; /* Makes the font bold */
+}
 
 @media (max-width: 768px) {
 

@@ -1,83 +1,113 @@
 .slider-wrapper {
     width: 80%;
     margin: 0 auto;
-  }
-  
+  }  
   .carousel {
     margin: 20px 0;
-  }
-  
+  }  
   .slide img {
     width: 100%;
     border-radius: 10px;
-  }
-  
+  }  
   .slide h3 {
     text-align: center;
     margin-top: 10px;
   }
-  
-
-
-
-  .w-100 {
+  .carousel {
     width: 100%;
-    font-family: "Barlow", sans-serif;
-  }
-  
-  .sd-template-one {
-    display: flex;
-    flex-direction: column;
-    background-color: #efefef;
-  }
-  
-  .sd-t1-slider {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .slider img {
-    width: 100%;
-    display: block;
-  }
-  
-  .slick-prev,
-  .slick-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: none;
-    font-size: 18px;
-    z-index: 10;
-    cursor: pointer;
-  }
-  
-  .slick-prev {
-    left: 10px;
-  }
-  
-  .slick-next {
-    right: 10px;
-  }
-  
-  .slick-dots {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
+    max-width: 1020px;  /* Adjust width as needed */
+    margin-top: 110px !important;
+    margin: auto;
+  }  
+  .carousel .slide {
     text-align: center;
+  }  
+  .carousel img {
+    width: 100%;
+    height: 45vh;
   }
-  
-  .slick-dots li button {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #ccc;
-    border: none;
+  .frame {
+    border: 2px solid black; /* Customize border style and color */
+    padding: 10px; /* Add padding for spacing */
+    border-radius: 5px; /* Add rounded corners if desired */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
   }
-  
-  .slick-dots li.slick-active button {
-    background-color: #000;
-  }
-  
+.container {
+    position: relative;
+    height: 65vh; /* Adjust height for responsive sizing */
+    width: 100%; /* Full width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
+.png-overlay {
+    position: absolute; /* Ensure it overlays the container */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: url('../../../shrigir_mandal/public/assets/Frame.png');
+    /*background-size: contain;  Ensure the PNG fits within the container */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 5; /* Higher than images */
+    pointer-events: none; /* Ensure interactions pass through */
+}
+.scroll-container {
+    position: relative;
+    overflow-x: auto;
+    white-space: nowrap;
+    max-width: 100%; /* Limit scroll container width */
+    height: 100%; /* Match container height */
+    z-index: 3; /* Lower than PNG overlay */
+    scrollbar-width: none;
+}
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+.image-wrapper {
+    display: inline-block;
+    margin: 0 10px;
+    height: 100%; /* Match the scroll container height */
+}
+.image-wrapper img {
+    width: 100%; /* Maintain aspect ratio */
+    height: 100%; /* Stretch to fill the height */
+    object-fit: fill; /* Ensure images fit without being cropped */
+}
+@media (max-width: 768px) {
+    .container {
+        height: 40vh; /* Adjust height for tablets */
+    }
+    .scroll-container {
+        max-width: 95%; /* Allow more width on smaller screens */
+    }
+    .carousel{
+        margin-top: 0px !important;
+        max-width: 500px;
+    }
+    .carousel img {
+        width: 100%;
+        height: 25vh;
+      }
+}
+
+@media (max-width: 480px) {
+    .container {
+        height: 30vh; /* Further reduce height for mobile screens */
+    }
+    .scroll-container {
+        max-width: 100%;
+    }
+    .carousel{
+        margin-top: 0px !important;
+        max-width: 500px;
+    }
+    .carousel img {
+        width: 100%;
+        height: 15vh;
+      }
+}
