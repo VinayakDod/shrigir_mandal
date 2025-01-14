@@ -1,14 +1,24 @@
-.background-container {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* Full screen height */
-  background-image: url('/assets/shiva_2.jpg'); /* Path to your image */
-  background-size: cover; /* Make the image cover the entire element */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat;
-  opacity: 0.4;
+
+  .background-container {
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    background-image: url('/assets/shiva_2.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+   
   }
   
+  .background-container::before { 
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(255, 255, 255, 0.8); 
+  }
   /* Add a solid color or background behind the content */
   .content {
     position: relative;
@@ -36,10 +46,14 @@
   }
 
   .gallery-container {
+    position: relative;
+    z-index: 1; 
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    
+
   }
   
   /* Main Image Styling */
@@ -53,6 +67,7 @@
     border: 2px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
   }
   
   .main-image {
@@ -110,5 +125,42 @@
 
 
   
-
+  .sd-t1-slider {
+    position: relative;
+  }
   
+  .carousel-inner .carousel-item {
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: black; /* Custom color for control icons */
+  }
+  
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 10px;
+    padding-left: 0;
+  }
+  
+  .slick-dots li {
+    margin: 0 5px;
+  }
+  
+  .slick-dots button {
+    background-color: transparent;
+    border: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: gray;
+  }
+  
+  .slick-dots .slick-active button {
+    background-color: black;
+  }
+  
+ 

@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @Component({
   selector: 'app-donation',
   standalone: true,
-  imports: [FontAwesomeModule],
+  imports: [],
   templateUrl: './donation.component.html',
   styleUrl: './donation.component.css'
 })
