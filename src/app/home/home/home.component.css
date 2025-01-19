@@ -162,5 +162,81 @@
   .slick-dots .slick-active button {
     background-color: black;
   }
+
   
- 
+ /* below lins are for card */
+
+
+
+/* Container for all cards */
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual card styling */
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 30%;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  align-items: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  margin: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card p {
+  color: #777;
+  font-size: 14px;
+}
+
+.card-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .card {
+    width: 30%; /* Keep the width small but in a row */
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+
+  /* Hide the text descriptions on mobile */
+  .card h3,
+  .card p {
+    display: none;
+  }
+
+  /* Optionally scale down icons on mobile */
+  .card-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .card-container {
+    justify-content: center;
+  }
+}
+

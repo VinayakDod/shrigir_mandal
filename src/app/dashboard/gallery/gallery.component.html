@@ -1,0 +1,23 @@
+<div class="gallery-container">
+    <div class="main-image-container">
+      <img [src]="mainImage" alt="Main Image" class="main-image" />
+    </div>
+    <div class="thumbnail-container">
+      <img *ngFor="let image of imageList" [src]="image" alt="Thumbnail" class="thumbnail"
+        (mouseenter)="updateMainImage(image)" />
+    </div>
+
+  </div> 
+  <!-- <div class="year_gallery_container">
+    <div class="card">
+      <div class="image">
+        <img src="assets/shiva_1.jpg" alt="images" />
+      </div>
+      <div class="content">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, delectus?</p>
+      </div>
+      <div class="year">
+        <h3>2023</h3>
+      </div>
+    </div>
+  </div>-->
