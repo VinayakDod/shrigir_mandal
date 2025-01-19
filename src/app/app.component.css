@@ -32,30 +32,30 @@
     border-radius: 5px; /* Add rounded corners if desired */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
   }
-.container {
+/* .container {
     position: relative;
-    height: 65vh; /* Adjust height for responsive sizing */
-    width: 100%; /* Full width */
+    height: 65vh;
+    width: 100%; 
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 4;
-}
-.png-overlay {
-    position: absolute; /* Ensure it overlays the container */
+} */
+/* .png-overlay {
+   
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 
     background-image: url('../../../shrigir_mandal/public/assets/Frame.png');
-    /*background-size: contain;  Ensure the PNG fits within the container */
+    
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    z-index: 5; /* Higher than images */
-    pointer-events: none; /* Ensure interactions pass through */
-}
+    z-index: 5; 
+    pointer-events: none; 
+} */
 .scroll-container {
     position: relative;
     overflow-x: auto;
