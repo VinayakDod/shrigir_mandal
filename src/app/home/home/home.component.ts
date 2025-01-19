@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, Renderer2,  PLATFORM_ID, Inject  } from '@angular/core';
-import{SlickCarouselModule } from 'ngx-slick-carousel';
+//import{SlickCarouselModule } from 'ngx-slick-carousel';
 import $ from 'jquery';
 
 
@@ -8,7 +8,7 @@ import $ from 'jquery';
   selector: 'app-home',
   standalone: true,
   imports: [CommonModule,
-   SlickCarouselModule,
+  
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',

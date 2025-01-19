@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { Howl } from 'howler';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
+//import { SlickCarouselModule } from 'ngx-slick-carousel';
 import $ from 'jquery';
 
 
@@ -10,7 +10,6 @@ import $ from 'jquery';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet,RouterModule,
-    SlickCarouselModule,
     CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
