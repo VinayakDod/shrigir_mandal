@@ -1,4 +1,4 @@
-<div class="gallery-container">
+<!-- <div class="gallery-container">
     <div class="main-image-container">
       <img [src]="mainImage" alt="Main Image" class="main-image" />
     </div>
@@ -7,17 +7,54 @@
         (mouseenter)="updateMainImage(image)" />
     </div>
 
-  </div> 
-  <!-- <div class="year_gallery_container">
-    <div class="card">
-      <div class="image">
-        <img src="assets/shiva_1.jpg" alt="images" />
-      </div>
-      <div class="content">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, delectus?</p>
-      </div>
-      <div class="year">
-        <h3>2023</h3>
+  </div>  -->
+
+
+<div class="container">
+  <h2 class="text-center my-4">Yearly Photo Gallery</h2>
+
+  <!-- Folder View (2023 and 2024) -->
+  <div class="row text-center" id="folders">
+    <div class="col-md-6 mb-4" (click)="loadImages('2022')">
+      <div class="folder">
+        <img src="assets/gallery/2022/img10.JPG" class="folder-img" alt="2022">
+        <p class="folder-text">2022</p>
       </div>
     </div>
-  </div>-->
+    <div class="col-md-6 mb-4" (click)="loadImages('2023')">
+      <div class="folder">
+        <img src="assets/gallery/2023/img10.JPG" class="folder-img" alt="2023">
+        <p class="folder-text">2023</p>
+      </div>
+    </div>
+    <div class="col-md-6 mb-4" (click)="loadImages('2024')">
+      <div class="folder">
+        <img src="assets/gallery/2024/img5.JPG" class="folder-img" alt="2024">
+        <p class="folder-text">2024</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery Section (Images will be shown here after clicking folder) -->
+  <div id="gallery" class="row mt-4">
+    <!-- Images will be dynamically displayed here -->
+    <div *ngFor="let image of selectedImages" class="col-md-4 mb-4">
+      <div class="gallery-item">
+        <img [src]="image.url" [alt]="image.description" class="img-fluid" loading="lazy">
+
+        <!-- Overlay with download icon and description -->
+        <div class="overlay">
+          <span class="download-icon" (click)="downloadImage(image.url)">
+            <i class="bi bi-download text-primary"></i> <!-- Bootstrap text color classes -->
+
+          </span>
+          <div class="description">{{ image.description }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="no-images-message" class="text-center" *ngIf="!selectedImages.length">
+    <p>No images available for the selected year.</p>
+  </div>
+</div>

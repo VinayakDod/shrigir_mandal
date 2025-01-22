@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 /* For tablets */
 /* Base styles for the navigation links */
+@import "bootstrap-icons/font/bootstrap-icons.css";
 .nav-link {
   color: white;
   text-decoration: none;
@@ -243,4 +244,19 @@ button:hover {
     height: 40px;
   }
 
+}
+
+
+@font-face {
+  font-family: 'Nudi';
+  src: url('/assets/Fonts/Nudi.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* body {
+  font-family: 'Nudi', sans-serif;
+} */
+.nudi-font {
+  font-family: 'Nudi', sans-serif;
 }

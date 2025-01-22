@@ -1,54 +1,45 @@
-
 <div class="background-container">
+  
 
   <div class="content-text">
- 
-<div class="card-container">
-  <div class="card">
-    <img src="assets/icons/contact.png" alt="Contact" class="card-icon" />
-    <h3>Contact</h3>
-    <p>Get in touch with us for more information.</p>
-  </div>
-
-  <div class="card">
-    <img src="assets/icons/about.png" alt="About" class="card-icon" />
-    <h3>About</h3>
-    <p>Learn more about our services and team.</p>
-  </div>
-
-  <div class="card">
-    <img src="assets/icons/gallery.png" alt="Gallery" class="card-icon" />
-    <h3>Gallery</h3>
-    <p>Browse our collection of images and videos.</p>
-  </div>
-</div>
- 
 
 
-  
+    <!-- <div class="gallery">
+      <div *ngFor="let url of imageUrls" class="image-container">
+        <img [src]="url" alt="Image" />
+      </div>
+    </div> -->
+
     
-  </div>
-  <!-- <div class="gallery-container">
-    <div class="main-image-container">
-      <img [src]="mainImage" alt="Main Image" class="main-image" />
-    </div>
-    <div class="thumbnail-container">
-      <img *ngFor="let image of imageList" [src]="image" alt="Thumbnail" class="thumbnail"
-        (mouseenter)="updateMainImage(image)" />
-    </div>
+    <h3>ಶ್ರೀ ಗಿರಿ ಮಲ್ಲಯ್ಯ ಭಕ್ತ ಮಂಡಳಿಯ ಸಂಕ್ಷಿಪ್ತ ಪರಿಚಯ</h3>
+    <p>ಈ ಸಮಿತಿ 2014ರಲ್ಲಿ ಸ್ಥಾಪನೆಯಾಯಿತು. ಸಮಿತಿಯ ಮುಖ್ಯ ಉದ್ದೇಶ ಯಾತ್ರಿಕರಿಗೆ ಉಚಿತ ಆಹಾರ, ವೈದ್ಯಕೀಯ ಸಹಾಯ ಮತ್ತು ವಿಶ್ರಾಂತಿ
+      ಸ್ಥಳವನ್ನು ಉಗಾದಿ ಹಬ್ಬದ ಸಮಯದಲ್ಲಿ ನಲ್ಲಮಲ್ಲಾ ಹುಲಿ ಸಂರಕ್ಷಿತ ಅರಣ್ಯದಲ್ಲಿ ಒದಗಿಸಲು.
+      ನಾವು ಗಂಗನಪಲ್ಲಿ ಎಂಬ ಸ್ಥಳದಲ್ಲಿ ಜನರಿಗೆ ಸೇವೆ ಮಾಡುತ್ತೇವೆ.
 
-  </div> -->
-  <!-- <div class="year_gallery_container">
-    <div class="card">
-      <div class="image">
-        <img src="assets/shiva_1.jpg" alt="images" />
+      ಮುಖ್ಯ ಗುರಿ ಜನರಿಗೆ ಅಂಬಳಿ ಅನ್ನು 24/7 ಸೇವೆ ಮಾಡುವುದು. ಅವರು ಕಳೆದ ಕೆಲ ವರ್ಷಗಳಿಂದ ಯಾವುದೇ ವ್ಯತ್ಯಯವಿಲ್ಲದೆ ಇದನ್ನು ನಿರಂತರವಾಗಿ
+      ಮಾಡುತ್ತಿದ್ದಾರೆ.</p>
+
+    <div class="card-container">
+      <div class="card" routerLink="/donation" routerLinkActive="active">
+        <img src="assets/icons/contact.png" alt="Contact" class="card-icon" />
+        <h3>Contact</h3>
+        <p>Get in touch with us for more information.</p>
       </div>
-      <div class="content">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, delectus?</p>
+
+      <div class="card" routerLink="/about" routerLinkActive="active" >
+        <img src="assets/icons/about.png" alt="About" class="card-icon" />
+        <h3>About</h3>
+        <p>Learn more about our services and team.</p>
       </div>
-      <div class="year">
-        <h3>2023</h3>
+
+      <div class="card" routerLink="/gallery" routerLinkActive="active">
+        <img src="assets/icons/gallery.png" alt="Gallery" class="card-icon" />
+        <h3>Gallery</h3>
+        <p>Browse our collection of images and videos.</p>
       </div>
     </div>
-  </div> -->
+  </div>
 </div>
+
+
+<router-outlet></router-outlet>

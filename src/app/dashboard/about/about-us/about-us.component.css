@@ -1,4 +1,4 @@
-
+/* 
 
 
 
@@ -13,7 +13,7 @@
     align-items: center;
     margin-bottom: 20px;
     justify-content: space-between;
-    flex-wrap: wrap;  /* Allows wrapping of text and image if needed */
+    flex-wrap: wrap;  
   }
   
   .text-and-image p {
@@ -29,7 +29,7 @@
     object-fit: cover;
     border-radius: 8px;
     margin-left: 20px;
-    transition: transform 0.3s ease; /* For smooth transition of image if you need hover effects */
+    transition: transform 0.3s ease; 
   }
   
   .text-and-image img.image-left {
@@ -42,25 +42,37 @@
     margin-left: 20px;
   }
   
-  /* Media Query for Mobile */
+
   @media (max-width: 768px) {
     .text-and-image {
       flex-direction: column;
-      align-items: center; /* Centers text and image */
-      justify-content: center; /* Aligns both text and image in the center */
+      align-items: center; 
+      justify-content: center;
     }
   
     .text-and-image p {
-      text-align: center; /* Centers the text on smaller screens */
-      margin-bottom: 10px; /* Adds some spacing between the text and image */
+      text-align: center;
+      margin-bottom: 10px; 
     }
   
     .text-and-image img {
       margin-left: 0;
       margin-right: 0;
-      margin-bottom: 15px; /* Adds space between image and text */
-      width: 100%; /* Makes image responsive on mobile */
-      max-width: 100%; /* Ensures images are not larger than the container */
-    }
+      margin-bottom: 15px;
+      max-width: 100%; 
+  }
+  
+  } */
+
+  .container img {
+    max-width: 100%;
+    height: auto;
+  }
+  h1, h3 {
+    font-family: 'Arial', sans-serif;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
   }
   

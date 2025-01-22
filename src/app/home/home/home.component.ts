@@ -1,21 +1,45 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, Renderer2,  PLATFORM_ID, Inject  } from '@angular/core';
-//import{SlickCarouselModule } from 'ngx-slick-carousel';
+import { Component } from '@angular/core';
 import $ from 'jquery';
+import { RouterModule, RouterOutlet } from '@angular/router';
+
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [CommonModule,
-  
+    RouterOutlet, RouterModule,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
-  
+
 
 })
 export class HomeComponent {
+
+
+  imageUrls: string[] = [];
+
+  ngOnInit(): void {
+    this.generateImageUrls();
+  }
+
+  generateImageUrls(): void {
+    const cloudName = 'djya0psog'; // Your Cloudinary cloud name
+    const folderName = ''; // Add folder name if applicable
+    const version = '1737396705'; // The version number
+    const totalImages = 20; // Total number of images (update as per your needs)
+
+    for (let i = 1; i <= totalImages; i++) {
+      const imageName = `img${i}_*`; // Adjust the naming pattern if necessary
+      const url = `https://res.cloudinary.com/${cloudName}/image/upload/v${version}/${folderName}${imageName}.jpg`;
+      this.imageUrls.push(url);
+    }
+  }
+
+
+
   //Array for images
 
   // constructor(private el: ElementRef, private renderer: Renderer2,@Inject(PLATFORM_ID) private platformId: any){}
@@ -27,7 +51,7 @@ export class HomeComponent {
   //   { image: 'assets/gallery/image1.png', alt: 'banner5' },
   //   { image: 'assets/gallery/image1.png', alt: 'banner6' }
   // ];
-  
+
 
 
   imageList: string[] = [
@@ -44,11 +68,11 @@ export class HomeComponent {
   updateMainImage(image: string): void {
     this.mainImage = image;
   }
-  DonationClick(){
-   
+  DonationClick() {
+
     console.warn("Donation button Clicked");
   }
-  AbtUsClick(){
+  AbtUsClick() {
     console.warn("AbtUsClick button Clicked");
   }
 }

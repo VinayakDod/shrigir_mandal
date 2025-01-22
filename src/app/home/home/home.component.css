@@ -30,7 +30,7 @@
   }
   .content-text{
     position: relative;
-    z-index: 1; /* Ensure the content stays on top of the background */
+    z-index: 2; /* Ensure the content stays on top of the background */
     padding: 20px;
     color: black;
     text-align: center;
@@ -240,3 +240,24 @@
   }
 }
 
+
+
+
+
+
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.image-container {
+  width: 200px;
+  height: auto;
+}
+img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
