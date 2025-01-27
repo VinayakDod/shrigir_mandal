@@ -23,3 +23,59 @@
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
     transition: transform 0.3s;
   }
+
+
+  .name-list {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .name-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .name-list li {
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    font-size: 18px;
+  }
+  
+  .name-list h2 {
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+  }
+
+  
+.scrolling-list {
+  height: 100%; /* Make the scrolling container take up full height */
+  overflow: hidden; /* Hide the overflowing items */
+  position: relative;
+}
+
+.scrolling-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  animation: scrollUp 10s linear infinite; /* Apply the scrolling animation */
+}
+
+.scrolling-list li {
+  background-color: #f4f4f4;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+@keyframes scrollUp {
+  0% {
+    transform: translateY(100%); /* Start from below the container */
+  }
+  100% {
+    transform: translateY(-100%); /* End above the container */
+  }
+}

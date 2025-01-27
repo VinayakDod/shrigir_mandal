@@ -1,19 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
-
-
 @Component({
   selector: 'app-gallery',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './gallery.component.html',
-  styleUrl: './gallery.component.css'
+  styleUrls: ['./gallery.component.css']
 })
 export class GalleryComponent {
-
   selectedImages: Array<{ url: string, description: string }> = [];
-  img1: any = "'assets/gallery/2022/img1.JPG'";
+  isLoading: boolean = false;
+  showGallery: boolean = false;
 
   images: Record<string, { url: string; description: string }[]> = {
     '2022': [
@@ -41,7 +39,7 @@ export class GalleryComponent {
       { url: 'assets/gallery/2022/img22.jpg', description: 'Nature Image 22' },
       { url: 'assets/gallery/2022/img23.jpg', description: 'Tech Image 23' },
       { url: 'assets/gallery/2022/img24.jpg', description: 'People Image 24' },
-      ],
+    ],
 
     '2023': [
       { url: 'assets/gallery/2023/img1.JPG', description: 'Nature Image 1' },
@@ -63,9 +61,8 @@ export class GalleryComponent {
       { url: 'assets/gallery/2023/img17.JPG', description: 'Tech Image 17' },
       { url: 'assets/gallery/2023/img18.JPG', description: 'People Image 18' },
       { url: 'assets/gallery/2023/img19.JPG', description: 'Nature Image 19' },
-      { url: 'assets/gallery/2023/img20.JPG', description: 'Tech Image 20' }
+      { url: 'assets/gallery/2023/img20.JPG', description: 'Tech Image 20' },
     ],
-
     '2024': [
       { url: 'assets/gallery/2024/img1.JPG', description: 'Image 1' },
       { url: 'assets/gallery/2024/img2.JPG', description: 'Image 2' },
@@ -121,24 +118,34 @@ export class GalleryComponent {
       { url: 'assets/gallery/2024/img52.JPG', description: 'Image 52' },
       { url: 'assets/gallery/2024/img53.JPG', description: 'Image 53' }
     ]
-
   };
 
-
   // Function to load images based on selected year
-  loadImages(year: string) {
-    this.selectedImages = this.images[year] || [];
-  }
-
-  // // Function to download image
-  // downloadImage(url: string) {
-  //   const link = document.createElement('a');
-  //   link.href = url;
-  //   link.download = url.split('/').pop() || 'image.jpg';
-  //   link.click();
+  // loadImages(year: string) {
+  //   this.isLoading = true;  // Show loading spinner
+  //   this.selectedImages = this.images[year] || [];
+  //   setTimeout(() => {
+  //     this.isLoading = false;  // Hide loading spinner after images are loaded
+  //     this.showGallery = true;  // Show gallery
+  //   }, 500);  // Simulating network delay
   // }
 
+  loadImages(year: string) {
+    this.isLoading = true;  // Show loading spinner
+    this.selectedImages = this.images[year] || [];
+    setTimeout(() => {
+      this.isLoading = false;  // Hide loading spinner after images are loaded
+      this.showGallery = true;  // Show gallery
+    }, 500);  // Simulating network delay
+  }
+  
 
+  // Function to go back to folders screen
+  goBackToFolders() {
+    this.showGallery = false;
+  }
+
+  // Function to download image
   downloadImage(url: string) {
     // Fetch the image as a Blob
     fetch(url)
@@ -162,6 +169,4 @@ export class GalleryComponent {
         console.error('Error downloading the image:', error);
       });
   }
-
-
 }

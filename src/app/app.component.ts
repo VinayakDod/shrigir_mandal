@@ -24,9 +24,16 @@ export class AppComponent implements OnInit {
   }
   ngOnInit(): void {
  this.playAudio();
+
+  // Simulate data loading (e.g., an API call)
+  setTimeout(() => {
+    this.isLoading = false;  // Hide the spinner after 3 seconds
+  }, 3000);
   }
 
+  isLoading: boolean = true;
 
+  
   playAudio() {
     const sound = new Howl({
       src: ['assets/shiva_music.mp3'],
