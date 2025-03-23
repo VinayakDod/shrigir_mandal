@@ -8,6 +8,28 @@ import { Component } from '@angular/core';
   styleUrl: './donation.component.css'
 })
 export class DonationComponent {
-  names: string[] = ['Shivu Kambar', 'Vinayak B Dodakundi', 'Channabasappa Elagi', 'Guru Pujari ', 'Mallu Hiremath', 'Ganesh Hajeri', 'Naveen Jumnal', 'Arun Gadagi', 'Appu Jumnal', 'Modi Guru', 'Prashant Gadagi', 'Pundu (Ganvdi)', 'Puttu T', 'Sachin Gadagi', 'Prakash Dodimanni', 'Shivu ', 'Basavaraj Jumanal', 'Swami Chikkamt', 'Guru Bijjaragi', 'Ishwar Kabade', 'Jagdish', 'Mallikarjun Manashetti', 'Malingaray Toravi',];
+  names: string[] = ['Shivu Kambar', 
+    'Vinayak B Dodakundi', 
+    'Channabasappa Elagi', 
+    'Guru Pujari ', 
+    'Mallu Hiremath', 
+    'Ganesh Hajeri', 
+    'Naveen Jumnal', 
+    'Arun Gadagi', 
+    'Appu Jumnal', 
+    'Modi Guru', 
+    'Prashant Gadagi', 
+    'Pundu (Ganvdi)', 
+    'Puttu T', 
+    'Sachin Gadagi', 
+    'Prakash Dodimanni', 
+    'Shivu ', 
+    'Basavaraj Jumanal', 
+    'Swami Chikkamt', 
+    'Guru Bijjaragi', 
+    'Ishwar Kabade', 
+    'Jagdish', 
+    'Mallikarjun Manashetti', 
+    'Malingaray Toravi',];
 
 }
